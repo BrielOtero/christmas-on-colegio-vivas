@@ -54,11 +54,6 @@
     }
     ?>
     <style>
-        /* .card {
-            border: .3rem solid transparent;
-            transition: 200ms ease-in-out transform;
-        } */
-
         .card:active {
             transform: scale(.97)
         }
@@ -99,7 +94,7 @@
         input[id="card_29"]:checked~label[for="card_29"] .card,
         input[id="card_30"]:checked~label[for="card_30"] .card,
         input[id="card_31"]:checked~label[for="card_31"] .card,
-        input[id="card_31"]:checked~label[for="card_32"] .card,
+        input[id="card_32"]:checked~label[for="card_32"] .card,
         input[id="card_33"]:checked~label[for="card_33"] .card,
         input[id="card_34"]:checked~label[for="card_34"] .card,
         input[id="card_35"]:checked~label[for="card_35"] .card,
@@ -178,7 +173,7 @@
                                     <h1>Añade tu juguete!</h1>
                                     <div class="form-group">
                                         <label for="">Nombre</label>
-                                        <input name="name" type="text" class="form-control" />
+                                        <input name="name" maxlength="12" type="text" class="form-control" />
                                     </div>
                                     <div class="form-group">
                                         <label for="">Descripcion</label>
@@ -187,7 +182,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="">URL de la Imagen</label>
-                                        <input name="image" class="form-control" type="text" />
+                                        <input name="image" class="form-control"  maxlength="500" type="text" />
                                     </div>
                                     <button>Añadir</button>
                                 </div>

@@ -11,7 +11,7 @@ CREATE TABLE letter (
 -- Create database Toys
 CREATE TABLE toys (
  id int(11) NOT NULL AUTO_INCREMENT,
- name varchar(8) NOT NULL,
+ name varchar(12) NOT NULL,
  description varchar(100) NOT NULL,
  image varchar(500) NOT NULL,
  PRIMARY KEY (id)
