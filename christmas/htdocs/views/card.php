@@ -18,6 +18,11 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/card-style.css" />
+    <script>
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
+    </script>
 
     <?php
     require_once '../controllers/toysController.php';
@@ -47,8 +52,8 @@
     ) {
         $letter = $_POST['card'];
         $selectedToys = "";
-        foreach($letter as $value){
-            $selectedToys = $selectedToys.$value.",";
+        foreach ($letter as $value) {
+            $selectedToys = $selectedToys . $value . ",";
         }
         $objLetterController->addLetter($selectedToys, $_POST['content'], $_POST['signature']);
     }
@@ -182,7 +187,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="">URL de la Imagen</label>
-                                        <input name="image" class="form-control"  maxlength="500" type="text" />
+                                        <input name="image" class="form-control" maxlength="500" type="text" />
                                     </div>
                                     <button>Añadir</button>
                                 </div>
@@ -212,7 +217,7 @@
                                         $i = 0;
                                         while ($fila = mysqli_fetch_array($toys)) {
 
-                                            print '<input class="checkbox" type="checkbox" name="card[]" value="'.$fila["id"].'" id="card_' . $i . '">';
+                                            print '<input class="checkbox" type="checkbox" name="card[]" value="' . $fila["id"] . '" id="card_' . $i . '">';
                                             print '<label for="card_' . $i . '">';
                                             print '<card id="card_' . $i . '" data-image="' . $fila["image"] . '">';
                                             print '<h1 slot="header">' . $fila["name"] . '</h1>';
@@ -237,8 +242,9 @@
                                             <td>
                                                 <p>
                                                     <label id="firma">Firma: </label>
-                                                    <input type="text" name="signature" id="firmatext" placeholder="Introduce tu firma aquí">
-                                                    </p>
+                                                    <input type="text" name="signature" id="firmatext"
+                                                        placeholder="Introduce tu firma aquí">
+                                                </p>
                                             </td>
                                         </tr>
                                         <tr>
